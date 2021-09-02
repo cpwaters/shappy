@@ -1,0 +1,9 @@
+{% if all_product_list %}
+    <div>
+    {% for product in all_product_list %}
+        <div style="list-style-type: none;"><a href="/pricelist/{{ product.id }}/">{{ product.description }}</a></div>
+    {% endfor %}
+    </div>
+{% else %}
+    <p>No products are available.</p>
+{% endif %}
